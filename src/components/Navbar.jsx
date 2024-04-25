@@ -1,4 +1,6 @@
 import React from 'react';
+import { Menu } from 'lucide-react';
+
 const links=[{
     title:"Home"
 },
@@ -38,6 +40,7 @@ function Navbar() {
 
 
         </ul>
+        {/* <Menu/> */}
       
       
     </div>
