@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ChevronDown } from 'lucide-react';
-import { AlignJustify } from 'lucide-react';
-import Menucmp from './Menucmp';
+import { X } from 'lucide-react';
 
-function Navbar() {
+
+function Menucmp({Menu,setMenu}) {
   const links=[
 {
     title:"Hotels"
@@ -22,12 +22,12 @@ function Navbar() {
 
 
 ];
-const [Menu,setMenu]=useState(false);
   return (
-    <div className='padding-x flex justify-between items-center py-3 bg-[#C4C4C4]'>
+    <div className='padding-x flex justify-between py-3  absolute top-0  w-full  left-0 bg-[#C4C4C4]'>
+        <div className='flex flex-col gap-5'>
     <h1 className="text-[30px] font-semibold text-[#000000]"><span className='bg-[#7E57C2] text-[#FFFFFF] p-1'>Book</span>azon</h1>
 
-    <ul className="flex gap-10 items-center max-lg:hidden">
+    <ul className="flex flex-col gap-10">
       <li className='text-[#000000] text-[18px] cursor-pointer font-semibold hover:text-[#7E57C2] flex  flex-row ' >Home <ChevronDown /></li>
       <li className='text-[#000000] text-[18px] cursor-pointer font-semibold hover:text-[#7E57C2] flex flex-row'>En <ChevronDown /></li>
 
@@ -44,16 +44,12 @@ const [Menu,setMenu]=useState(false);
 
 
     </ul>
-     
-    <AlignJustify onClick={()=>setMenu(!Menu)} className='lg:hidden'/>
-    
-   {
-    Menu && <Menucmp setMenu={setMenu} Menu={Menu} />
-   }
+    </div>
+    <X onClick={()=>setMenu(!Menu)}/>
 
   
 </div>
   )
 }
 
-export default Navbar;
+export default Menucmp;
