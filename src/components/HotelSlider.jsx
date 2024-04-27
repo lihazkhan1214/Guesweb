@@ -1,12 +1,12 @@
 import React from 'react';
 import managerimg from "../assets/manager.png";
-import hoteimg from "../assets/manager.png";
+import hoteimg from "../assets/hotel.png";
 
 function HotelSlider() {
   return (
-    <div className='flex jusitfy-center padding-x py-10 bg-[#FFFFFF]'>
+    <div className='flex jusitfy-center gap-5 padding-x py-10 bg-[#FFFFFF]'>
 
-        <div className="left flex flex-col gap-5">
+        <div className="left xl:pt-[140px] flex flex-col gap-5">
 
             <h1 className="text-[56px] font-medium text-[#000000] w-[588px]">Find The Best Hotel For
 Accommodation</h1>
@@ -31,9 +31,9 @@ and suites.  Explore the vibrant city with ease from our convenient central loca
         </div>
 
 
-        <div className="right">
+        <div className="right w-[563px]">
 
-            rightside
+            <img src={hoteimg} alt="" />
         </div>
     
     </div>
